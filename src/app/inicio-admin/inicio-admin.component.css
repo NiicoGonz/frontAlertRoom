@@ -1,0 +1,97 @@
+.w-auto {
+    margin-top: 28px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #eee;
+}
+
+.block-info {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.w-auto a,
+h2 {
+    margin-left: 15%;
+}
+
+.icon-i {
+    margin-left: 60px;
+    margin-top: 20px;
+    float: left;
+}
+
+.costum-control {
+    margin-right: 15px;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.box-table {
+    margin-top: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.box-filter {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.iz {
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.de {
+    float: right;
+    margin-left: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.span {
+    margin-top: 28px;
+    margin-left: 10%;
+    float: left;
+}
+
+.btn {
+    margin-top: 3%;
+    margin-block-end: 3%;
+    margin-left: 40%;
+    background: rgb(252, 116, 5);
+    border-color: #fff;
+}
+
+@media(min-width:1440px) {
+    .btn {
+        margin-left: 100%;
+        background: rgb(252, 116, 5);
+        border-color: #fff;
+    }
+}
+
+@media(min-width:2560px) {
+    .btn {
+        margin-left: 0%;
+        background: rgb(252, 116, 5);
+        border-color: #fff;
+    }
+}

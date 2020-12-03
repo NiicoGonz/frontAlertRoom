@@ -1,0 +1,65 @@
+<app-nav></app-nav>
+<!--BODY-->
+<div class="container-fluid">
+    <nav id="sidebar" class="">
+        <h1><a class="logo">Administrador</a></h1>
+        <ul class="list-unstyled components mb-5">
+            <li>
+                <a [routerLink]="['/registerUserAdmin']"><span class="fa fa-user mr-3"></span> Registrar Usuario</a>
+            </li>
+            <li>
+                <a [routerLink]="['/consultUserAdmin']"><span class="fa fa-search fa-fw"></span> Consultar Usuario</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="box-info" style="margin-top: 3%;">
+        <h1>Gestion de usuarios</h1><br>
+        <hr>
+        <a>El modulo de gestion de usuarios podras registrar y consultar la informacion de las personas relacionadas con el sistema;
+            <br>Te brindamos seguridad con la manipulacion de informacion sensible de tus usuarios para garantizar un correcto uso de ellos.</a><br><br><br>
+    </div><br><br><br><br>
+    <div class="box-form">
+        <form [formGroup]="form" class="was-validated">
+            <div class="re-box">
+                <h2>Registro Nuevo Usuario</h2><br><br><br>
+                <div class="form-group" id="user-group">
+                    <div class="col-sm-4">
+                        <div class="icon"><i class='fas fa-user-circle' style='font-size:36px'></i></div>
+                        <select formControlName="rol" required class="custom-select">
+                            <option>Instructor</option>
+                            <option>Guarda</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon"><i class='fas fa-address-card' style='font-size:36px'></i></div>
+                    <input formControlName="identificacion" required type="text" class="form-control" id="Identificacion" placeholder="Identificacion">
+                </div><br>
+                <div class="col-sm-4">
+                    <div class="icon"><i class='far fa-id-badge' style='font-size:36px'></i></div>
+                    <input formControlName="nombre" type="text" required class="form-control" id="names" placeholder="Nombres">
+                </div><br>
+                <div class="col-sm-4">
+                    <div class="icon"><i class='far fa-id-card' style='font-size:36px'></i></div>
+                    <input formControlName="apellido" type="text" required class="form-control" id="lastname" placeholder="Apellidos">
+                </div><br>
+                <div class="col-sm-4">
+                    <div class="icon"><i class='fas fa-envelope' style='font-size:36px'></i></div>
+                    <input formControlName="email" required type="email" class="form-control" id="email" placeholder="Correo">
+                </div><br>
+                <div class="col-sm-4">
+                    <div class="icon"><i class='far fa-address-book' style='font-size:36px'></i></div>
+                    <input formControlName="telefono" type="text" class="form-control" id="phone" placeholder="Telefono">
+                </div>
+                <button type="button" class="btn btn-primary col-sm-4" (click)="onSubmit()">Registrar</button>
+            </div>
+            <div class="spant">
+                <img [src]="img_register">
+            </div>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
+<!--/BODY-->

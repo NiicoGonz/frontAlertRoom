@@ -1,0 +1,37 @@
+.H2 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.spant img {
+    width: 300px;
+    height: 500px;
+    margin-left: 20%;
+    border-radius: 20px;
+}
+
+.form-control {
+    width: 30%;
+}
+
+.form-line {
+    margin-left: -10px;
+    width: 110%;
+    text-align: center;
+}
+
+.form-inline {
+    width: 200%;
+    text-align: center;
+}
+
+.form-group {
+    margin-left: -0%;
+    width: 370%;
+    height: 80%;
+}
+
+.form {
+    float: left;
+    margin-left: 15%;
+}

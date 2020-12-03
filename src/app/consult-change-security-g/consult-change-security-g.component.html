@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<!--BOBY-->
+<div class="container-fluid">
+    <nav id="sidebar" class="">
+        <h1><a class="logo">Guarda de seguridad</a></h1>
+        <ul class="list-unstyled components mb-5">
+            <li><a [routerLink]="['/registerChangeSegurityG']"><span class="fa fa-pen-alt mr-3"></span> Registrar novedades</a></li>
+            <li><a [routerLink]="['/consultChangeSegurityG']"><span class="fa fa-search fa-fw"></span> Consultar novedades</a></li>
+        </ul>
+    </nav><br><br>
+    <div class="block-info text-center" style="margin-left: 25%;margin-right: 10%;font-family: 'Times New Roman', Times, serif;">
+        <h1>Gestion de novedades</h1>
+        <hr><br>
+        <a>El modulo de gestion de novedades te permitira consultar las novedades con su respectiva fecha y ambiente para que se lleve un control de las mismas; 
+        <br>Se llevara un registro constante de las novedades registradas para salvaguardar los vienes de cada ambiente.</a>
+    </div><br><br><br>
+    <div class="box">
+        <h2 class="H2" style="text-align: center;">Historial de Novedades</h2><br>
+        <div class="box-table">
+            <table id="htmlData" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped tabled-bordered row-border hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Ambiente</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Observacion</th>
+                        <th scope="col">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of arrayNovedades">
+                        <td>{{i['fechaHora']}}</td>
+                        <td>{{i['idAmbiente']['id']}}</td>
+                        <td>{{i['idUsuarioInstructor']['nombres']}}</td>
+                        <td>{{i['observaciones']}}</td>
+                        <td><button (click)="descripcion(i)" class="btn btn-primary">Ver Descripción</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><br><br>
+
+</div>
+<!--/BOBY-->
+<app-footer></app-footer>

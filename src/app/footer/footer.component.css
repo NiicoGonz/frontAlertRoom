@@ -1,0 +1,22 @@
+.forgot a {
+    color: black;
+}
+.row {
+    margin-left: 10%;
+    text-align: center;
+}
+
+
+@media(min-width:320px) {
+    footer {
+        font-size: 90%;
+    }
+
+}
+
+@media(min-width: 768px) {
+    footer {
+        font-size: 90%;
+    }
+    
+}

@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+<!--BOBY-->
+<div class="container-fluid">
+    <div class="block-info" style=" text-align: center;margin-left: 15%;margin-right: 10%;margin-top: 3%;font-family: 'Times New Roman', Times, serif;">
+        <h1>Gestion de ambientes</h1>
+        <hr><br>
+        <a>El modulo de gestion de ambientes te permitira consultar los ambientes disponibles; 
+            <br>Solicitar las llaves del ambiente como una breve descripcion del inventario del ambiente.</a>
+    </div><br><br><br>
+    <div class="form">
+        <h3 class="H2">Ambientes</h3><br>
+        <form [formGroup]="form" class="form-inline">
+            <input formControlName="numeroAmbiente" class="form-control mr-sm-2" type="search" placeholder="Numero de ambiente" aria-label="Search">
+            <button (click)="getAmbiente()" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Consultar ambiente</button>
+        </form>
+        <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción del inventario:</label>
+            <textarea *ngFor="let i of inventario" class="form-control" id="message-text" disabled> {{i['cantidad']}} {{i['idArticulo']['nombre']}}</textarea>
+        </div>
+        <form class="form-inline">
+            <input *ngIf="validador" class="form-control mr-sm-2" type="text" placeholder="Llaves  Disponibles" disabled>
+            <input *ngIf="!validador" class="form-control mr-sm-2" type="text" placeholder=" Llaves  no disponible" disabled>
+            <button *ngIf="!validador" disabled class="btn btn-outline-success my-2 my-sm-0" type="submit">Solicitar</button>
+            <button *ngIf="validador" (click)="solicitarLlaves()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Solicitar</button>
+
+        </form><br>
+
+        <div>
+            <input *ngIf="validador" class="form-line" type="search" placeholder="Realice la solicitud para pasar al control por las llaves">
+            <input *ngIf="!validador" class="form-line" type="search" placeholder="llaves no disponles en el puesto de gurda" disabled>
+
+        </div>
+    </div>
+    <div class="spant">
+        <img [src]="img_ambi">
+    </div>
+    <!-- Small modal -->
+
+</div><br><br><br><br><br>
+
+<script>
+</script>
+<!--/BOBY-->
+<app-footer></app-footer>
