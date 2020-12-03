@@ -488,3 +488,35 @@
         text-align: left;
     }
 }
+
+.btn-primary {
+    background-color: rgb(252, 116, 5, 0.9);
+    border-color: rgb(252, 116, 5);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(252, 116, 5);
+    border-color: rgb(252, 116, 5);
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(252, 116, 5);
+    border-color: rgb(252, 116, 5);
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: rgb(252, 116, 5);
+    border-color: rgb(252, 116, 5);
+}
+
+.btn-outline-primary {
+    color: rgb(252, 116, 5);
+    border-color: rgb(252, 116, 5);
+}
