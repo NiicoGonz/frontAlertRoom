@@ -21,7 +21,6 @@ import { ReportNewsInstruComponent } from './report-news-instru/report-news-inst
 import { ConsultRoomInstruComponent } from './consult-room-instru/consult-room-instru.component';
 import { PassKeyInstruComponent } from './pass-key-instru/pass-key-instru.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthServiceComponent } from './auth-service/auth-service.component';
 import { NavComponent } from './nav/nav.component';
 
 @NgModule({
@@ -43,7 +42,6 @@ import { NavComponent } from './nav/nav.component';
     ConsultRoomInstruComponent,
     PassKeyInstruComponent,
     ProfileComponent,
-    AuthServiceComponent,
     NavComponent,
   ],
   imports: [
