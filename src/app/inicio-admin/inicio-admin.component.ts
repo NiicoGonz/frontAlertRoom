@@ -80,7 +80,7 @@ export class InicioAdminComponent implements OnDestroy, OnInit {
         doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
         return doc;
     }).then((docResult) => {
-      docResult.save(`${new Date().toISOString()}_tutorial.pdf`);
+      docResult.save(`${new Date().toISOString()}_Novedades.pdf`);
     });
   }
 }

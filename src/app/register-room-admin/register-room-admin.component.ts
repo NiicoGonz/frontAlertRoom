@@ -157,7 +157,11 @@ export class RegisterRoomAdminComponent implements OnInit {
         // tslint:disable-next-line: no-unused-expression
       } else {
         console.log('error en el form');
-        Swal.fire('upps ha ocurrido un error, intentelo de nuevo');
+        Swal.fire({
+        title: 'Recuerde llenar los campos obligatorios!',
+        confirmButtonText: 'ok!',
+        confirmButtonColor: 'rgb(252, 116, 5) ',
+      });
       }
     } catch (error) {
       console.log('holas soy un error', error);
