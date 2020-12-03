@@ -1,0 +1,281 @@
+@media(min-width:1326px) {
+    .btn-outline-primary:hover {
+        color: #fff;
+        background-color: rgb(252, 116, 5);
+        border-color: rgb(252, 116, 5);
+    }
+    .btn-outline-primary {
+        color: rgb(252, 116, 5);
+        border-color: rgb(252, 116, 5);
+    }
+    .btn-outline-primary:not(:disabled):not(.disabled).active,
+    .btn-outline-primary:not(:disabled):not(.disabled):active,
+    .show>.btn-outline-primary.dropdown-toggle {
+        color: #fff;
+        background-color: rgb(252, 116, 5);
+        border-color: rgb(252, 116, 5);
+    }
+    .container-fluid {
+        min-height: calc(100vh);
+        padding: 0%;
+    }
+    .row {
+        margin-right: 0%;
+    }
+    .box {
+        margin-left: 11%;
+    }
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        position: relative;
+        float: left;
+        height: 100px;
+    }
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul.components {
+        padding: 0;
+    }
+    #sidebar ul li {
+        font-size: 16px;
+    }
+    #sidebar ul li>ul {
+        margin-left: 10px;
+    }
+    #sidebar ul li>ul li {
+        font-size: 14px;
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #sidebar ul li a:hover {
+        color: #fff;
+        background: rgb(252, 116, 5);
+        border-bottom: 1px solid rgb(252, 116, 5);
+    }
+    .H2 {
+        margin-left: 40%;
+    }
+    .box-form .row {
+        margin-left: 30%;
+    }
+    .form-inline {
+        margin-left: 31%;
+    }
+    .form-control {
+        margin-bottom: 2%;
+    }
+    .a {
+        margin-left: 60%;
+    }
+    .check {
+        margin-left: 30.9%;
+    }
+    .btn {
+        margin-top: 4%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .notification {
+        margin-top: 2%;
+        margin-left: 25%;
+        margin-right: 18%;
+        text-align: center;
+    }
+}
+
+@media(min-width:1024px) {
+    .container-fluid {
+        min-height: calc(100vh);
+        padding: 0%;
+    }
+    .row {
+        margin-right: 0%;
+    }
+    .box {
+        margin-left: 11%;
+    }
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        position: relative;
+        float: left;
+        height: 100px;
+    }
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul.components {
+        padding: 0;
+    }
+    #sidebar ul li {
+        font-size: 16px;
+    }
+    #sidebar ul li>ul {
+        margin-left: 10px;
+    }
+    #sidebar ul li>ul li {
+        font-size: 14px;
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #sidebar ul li a:hover {
+        color: #fff;
+        background: rgb(252, 116, 5);
+        border-bottom: 1px solid rgb(252, 116, 5);
+    }
+    .H2 {
+        margin-left: 40%;
+    }
+    .box-form .row {
+        margin-left: 30%;
+    }
+    .form-inline {
+        margin-left: 31%;
+    }
+    .form-control {
+        margin-bottom: 2%;
+    }
+    .a {
+        margin-left: 60%;
+    }
+    .check {
+        margin-left: 30.9%;
+    }
+    .btn {
+        margin-top: 4%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .notification {
+        margin-top: 2%;
+        margin-left: 25%;
+        margin-right: 18%;
+        text-align: center;
+    }
+}
+
+@media(min-width:768px) {
+    .box-info {
+        text-align: center;
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-right: 10%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .box {
+        margin-left: 11%;
+    }
+    .box-info h1 {
+        text-align: center;
+        margin-top: -30px;
+    }
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media(min-width:425px) {
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media(min-width:375px) {
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media(min-width:320px) {
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}

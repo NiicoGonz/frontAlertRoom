@@ -1,0 +1,72 @@
+.block-info {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 30px;
+}
+
+.body {
+    margin: 0%;
+    padding: 0%;
+}
+
+@media (min-width:1326px) {
+    .btn {
+        background: rgb(252, 116, 5);
+        border-color: #fff;
+    }
+    .alert {
+        margin-top: 3%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .w-auto a,
+    h2 {
+        margin-left: 15%;
+    }
+    .w-auto a {
+        margin-left: 15%;
+    }
+    .icon-i {
+        float: left;
+        margin-left: 90px;
+        margin-top: 20px;
+    }
+    .text-alerti {
+        margin-left: 30%;
+    }
+    .text-alert {
+        margin-right: 20%;
+    }
+    .btn {
+        float: right;
+        margin-right: 12px;
+        margin-top: -7%;
+        text-align: center;
+        border-color: black;
+        box-shadow: black;
+    }
+    .fas {
+        float: left;
+        margin: 18px;
+    }
+    .my-custom-scrollbar {
+        position: relative;
+        height: 280px;
+        overflow: auto;
+        border-color: black;
+    }
+    .table-wrapper-scroll-y {
+        display: block;
+    }
+    .box-table {
+        margin-top: 40px;
+    }
+    .span {
+        margin-top: 28px;
+        margin-left: 10%;
+        float: left;
+    }
+    .btng {
+        margin-top: 10%;
+    }
+}

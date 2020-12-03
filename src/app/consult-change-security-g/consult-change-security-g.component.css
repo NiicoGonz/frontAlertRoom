@@ -1,0 +1,197 @@
+@media(min-width:1326px) {
+    .btn {
+        background: rgb(252, 116, 5);
+        border-color: #fff;
+    }
+    .box-info {
+        float: left;
+        margin-right: 10%;
+        margin-top: 20px;
+    }
+    .box-info h1 {
+        text-align: center;
+        margin-top: -30px;
+    }
+    .container-fluid {
+        min-height: calc(100vh);
+        padding: 0%;
+    }
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        position: relative;
+        float: left;
+        height: 100px;
+    }
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul.components {
+        padding: 0;
+    }
+    #sidebar ul li {
+        font-size: 16px;
+    }
+    #sidebar ul li>ul {
+        margin-left: 10px;
+    }
+    #sidebar ul li>ul li {
+        font-size: 14px;
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #sidebar ul li a:hover {
+        color: #fff;
+        background: rgb(252, 116, 5);
+        border-bottom: 1px solid rgb(252, 116, 5);
+    }
+    .H2 {
+        float: left;
+        padding-left: 7%;
+    }
+    .box-table {
+        padding-left: 24%;
+        padding-right: 10%;
+    }
+    .form-inline {
+        padding-left: 45%;
+    }
+}
+
+@media(min-width:1024px) {
+    .box-info {
+        float: center;
+        margin-right: 10%;
+        margin-top: 20px;
+    }
+    .container-fluid {
+        min-height: calc(100vh);
+        padding: 0%;
+    }
+    i {
+        font-size: 20px;
+    }
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        position: relative;
+        float: left;
+        height: 100px;
+    }
+    #sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul.components {
+        padding: 0;
+    }
+    #sidebar ul li {
+        font-size: 16px;
+    }
+    #sidebar ul li>ul {
+        margin-left: 10px;
+    }
+    #sidebar ul li>ul li {
+        font-size: 14px;
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #sidebar ul li a:hover {
+        color: #fff;
+        background: rgb(252, 116, 5);
+        border-bottom: 1px solid rgb(252, 116, 5);
+    }
+    .H2 {
+        float: left;
+        padding-left: 7%;
+    }
+    .box-table {
+        padding-left: 24%;
+        padding-right: 10%;
+    }
+    .form-inline {
+        padding-left: 45%;
+    }
+}
+
+@media(min-width:768px) {
+    .container-fluid {
+        min-height: calc(100vh);
+        padding: 0%;
+    }
+    i {
+        font-size: 15px;
+    }
+    #sidebar h1 .logo {
+        color: #fff;
+        display: block;
+        padding: 10px 30px;
+        background: rgb(252, 116, 5);
+    }
+    #sidebar ul.components {
+        padding: 0;
+    }
+    #sidebar ul li {
+        font-size: 16px;
+    }
+    #sidebar ul li>ul {
+        margin-left: 10px;
+    }
+    #sidebar ul li>ul li {
+        font-size: 14px;
+    }
+    #sidebar ul li a {
+        padding: 15px 30px;
+        display: block;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #sidebar ul li a:hover {
+        color: #fff;
+        background: rgb(252, 116, 5);
+        border-bottom: 1px solid rgb(252, 116, 5);
+    }
+    .H2 {
+        float: left;
+        padding-left: 45%;
+    }
+    .box-table {
+        padding-left: 24%;
+        padding-right: 10%;
+    }
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 280px;
+    overflow: auto;
+}

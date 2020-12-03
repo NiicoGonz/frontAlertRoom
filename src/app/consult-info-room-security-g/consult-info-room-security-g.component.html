@@ -1,0 +1,52 @@
+<app-nav></app-nav>
+<!--BOBY-->
+
+<div class="container-fluid">
+
+    <div class="block-info" style="margin-left: 10%; text-align: center;">
+        <h1>Gestion de Ambientes</h1>
+        <hr>
+        <a>El modulo de gestion de ambinetes te permitira llevar un control completo de busqueda filtrada, devolucion de llaves y el estado de los mismos; 
+            <br>Brindandote comodidad de saber que sucede en los ambientes de formacion. </a>
+    </div><br><br>
+
+    <h2 class="H2">Informacion de ambientes</h2>
+    <br>
+    <br>
+    <div class="box-table">
+        <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped tabled-bordered row-border hover">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Nombre Ambiente</th>
+                    <th scope="col">Numero Ambiente</th>
+                    <th scope="col">Detalles</th>
+                    <th *ngIf="checkID" scopoe="col">Id Solicitud</th>
+                    <th scope="col">Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of arraySolicitudes">
+                    <td>{{ i.fechaHora }}</td>
+                    <td>{{ i.idAmbiente.nombre }}</td>
+                    <td>{{ i.idAmbiente.id }}</td>
+                    <td>
+                        {{ i.observaciones }}<br /> Nombre : {{i.idUsuario.nombres}}
+                    </td>
+                    <td *ngIf="checkID">{{i.idSolicitud}}</td>
+                    <td>
+                        Llaves en ambiente :{{i.idAmbiente.ocupado}}
+                        <button (click)="getLlaves(i.idSolicitud)" *ngIf="i.idAmbiente.ocupado == 'S'" type="button" class="btn btn-primary">
+                Devolucion de Llaves
+              </button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<br />
+<!--/BOBY-->
+<app-footer></app-footer>

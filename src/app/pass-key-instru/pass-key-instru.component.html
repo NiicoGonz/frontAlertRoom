@@ -1,0 +1,32 @@
+<app-nav></app-nav>
+<!--BODY-->
+<div class="container-fluid">
+    <div class="block-info" style=" text-align: center;margin-left: 15%;margin-right: 10%;margin-top: 3%;font-family: 'Times New Roman', Times, serif;">
+        <h1>Rotacion de llaves</h1>
+        <hr><br>
+        <a> Realizar la rotación de llavesEn caso de que otro instructor lo solicite, tenga   cuidado en el momento de entregar
+                 para tener un mayor control al realizar estos verifique en que ambiente se encuentran las llaves y  si las posee  otro instructor.
+            </a>
+    </div><br><br><br>
+    <div class="id">
+        <form [formGroup]="form" class="form">
+            <div class="form-group">
+                <label for="idinstru">Ingrese el id del instructor a entregar:</label>
+                <input formControlName="idInstru" type="text" class="form-control" id="idinstru" placeholder="11101210">
+            </div>
+            <div class="form-group">
+                <label for="ambiente">Ingrese el numero de ambiente que va rotar:</label>
+                <input formControlName="idAmbiente" type="text" class="form-control" id="ambiente" placeholder="12">
+            </div>
+            <button (click)="onSubmit()" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Pasar LLaves</button>
+        </form>
+    </div>
+    <div class="spant">
+        <img [src]="img_pasar">
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!-- Small modal -->
+
+<!--/BODY-->
+<app-footer></app-footer>

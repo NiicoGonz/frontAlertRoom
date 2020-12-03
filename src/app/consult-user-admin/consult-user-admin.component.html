@@ -1,0 +1,69 @@
+<app-nav></app-nav>
+<!--BOBY-->
+<div class="container-fluid">
+    <nav id="sidebar" class="">
+        <h1><a class="logo">Administrador</a></h1>
+        <ul class="list-unstyled components mb-5">
+            <li>
+                <a [routerLink]="['/registerUserAdmin']"><span class="fa fa-user mr-3"></span> Registrar Usuario</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/consultUserAdmin']"
+          ><span class="fa fa-search fa-fw"></span> Consultar Usuario</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="box-info" style="text-align: center;">
+        <h1>Gestion de usuarios</h1><br>
+        <hr>
+        <a>El modulo de gestion de usuarios podras registrar y consultar la informacion de las personas relacionadas con el sistema;
+          <br>Te brindamos seguridad con la manipulacion de informacion sensible de tus usuarios para garantizar un correcto uso de ellos.</a><br><br><br>
+    </div>
+    <h2 class="H2">Consultar Usuarios</h2><br/><br/>
+    <!--tabla SCrollbar-->
+    <div class="box-table">
+        <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped tabled-bordered row-border hover">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Identificacion</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of arrayUser">
+                    <td>{{ i.nombres }}</td>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.email }}</td>
+                    <td>{{ i.telefono }}</td>
+                    <td *ngIf="i.tipoUsuario=='A'">Admin</td>
+                    <td *ngIf="i.tipoUsuario=='I'">Instru</td>
+                    <td *ngIf="i.tipoUsuario=='G'">Guarda</td>
+                    <td *ngIf="i.estado=='A'">Activo</td>
+                    <td *ngIf="i.estado=='I'">Inactivo</td>
+
+                    <td>
+
+                        <button *ngIf="i.tipoUsuario!='A'" (click)="updateEstado(i.id)" type="button" class="btn btn-online-primary" data-toggle="tooltip" data-placement="top" title="Inactivar Usuario">
+              <i class="fas fa-unlock-alt"></i>
+            </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+<app-footer></app-footer>
+
+<!--/BOBY-->

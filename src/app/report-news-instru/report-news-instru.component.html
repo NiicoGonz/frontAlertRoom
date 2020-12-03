@@ -1,0 +1,111 @@
+<app-nav></app-nav>
+<!--BODY-->
+<br>
+<div class="container-fluid">
+    <div class="block-info" style=" text-align: center;margin-left: 20%;margin-top: 1%;margin-right: 10%;font-family: 'Times New Roman', Times, serif;">
+        <h1>Gestion de historial novedades</h1>
+        <hr><br>
+        <a>El modulo de gestion de historial novedades te permitira consultar las novedades con su respectiva informacion de realizacion;
+        <br>Para que puedas ver el flujo de las novedades en los ambientes de formacion.</a>
+    </div>
+    <div class="container" style="text-align: center;">
+        <form [formGroup]="form">
+            <div class="custom-control custom-radio">
+                <input formControlName="idAmbiente" class="form-control" type="text" placeholder="idAmbiente">
+                <input formControlName="observaciones" class="form-control" placeholder="Ingrese una observacion">
+            </div>
+            <br>
+            <button (click)="solicitarNovedad()" type="button" class="btn btn-primary">Solicitar Guarda</button>
+        </form>
+    </div>
+    <div class="box">
+        <h2 class="H2" style="margin-left: 37%;">Historial de Novedades</h2><br>
+        <div class="box-table" style="margin-right: 18%; margin-left: 18%;">
+            <div class="table-5 my-custom-scrollbar">
+                <table id="htmlData" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped tabled-bordered row-border hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Ambiente</th>
+                            <th scope="col">Instructor</th>
+                            <th scope="col">Observacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of arrayNovedades">
+                            <td>{{i['fechaHora']}}</td>
+                            <td>{{i['idAmbiente']['id']}}</td>
+                            <td>{{i['idUsuarioInstructor']['nombres']}}</td>
+                            <td>{{i['observaciones']}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><br><br>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: black;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label" style="color: white;">Instructor</label>
+                            <input type="text" class="form-control" id="instructor" placeholder="10101314">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="German Angarita">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label" style="color: white;">Guarda</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nameGuard" placeholder="Paola Grajales">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label" style="color: white;">Caracteristicas</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="hour" placeholder="Hora">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="ambient" placeholder="Ambiente">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="description" placeholder="Description">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message-text" placeholder="Descripcion"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Small modal -->
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" style="background-color: white;">
+            <div class="modal-content">
+                <h6 class="modal-title" id="exampleModalLabel" style="color: black; text-align: center;">Estado</h6>
+            </div>
+            <div class="modal-body">
+                <i class='fas fa-check-circle' style='font-size:48px;color:green;margin-left: 42%;'></i>
+                <p style="color: green;text-align: center;">Espere en el ambiente mientras el guarda lo atiende</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/BODY-->
+<app-footer></app-footer>

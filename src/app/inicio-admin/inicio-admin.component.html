@@ -1,0 +1,57 @@
+<app-nav></app-nav>
+<!--BODY-->
+
+<body>
+    <div class="block-info">
+        <h1>Gestion de novedades</h1>
+        <hr><br>
+        <a>El modulo de gestion de novedades te permitira llevar un control completo de busqueda, filtrado, y descarga de reportes; 
+            <br>Brindandote comodidad de saber que sucede en los ambientes de formacion. </a>
+    </div>
+    <div class="container-fluid">
+        <div class="w-auto p-3 shadow p-3 mb-5 bg-white rounded">
+            <div class="icon-i">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                    <circle cx="8" cy="4.5" r="1"/>
+                </svg>
+            </div>
+            <h2>Informacion de novedades</h2><br>
+            <a>Hay nuevas novedades en los ambientes</a>
+        </div>
+        <div class="box-table">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped tabled-bordered row-border hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Ambiente</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Observacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of arrayNovedades">
+                        <td>{{i['fechaHora']}}</td>
+                        <td>{{i['idAmbiente']['id']}}</td>
+                        <td>{{i['idUsuarioInstructor']['nombres']}}</td>
+                        <td>{{i['observaciones']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!---->
+        <!--La tabla de ejemplo termina aqui-->
+        <div class="box-filter">
+        </div>
+        <button (click)="downloadPDF()" type="submit" class="btn btn-primary btn-lg">
+            Generar Reporte PDF
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-earmark-arrow-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7 2l.5-2.5 3 3L10 5a1 1 0 0 1-1-1zm-.5 3.5a.5.5 0 0 0-1 0v3.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 11.293V7.5z"/>
+            </svg>
+        </button><br>
+    </div>
+    <br>
+</body>
+<!--/BODY-->
+<app-footer></app-footer>
