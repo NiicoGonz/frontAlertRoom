@@ -3,8 +3,8 @@ import {
   CanActivate,
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-  Router,
   UrlTree,
+  Router,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth.service';
@@ -12,11 +12,10 @@ import { AuthService } from '../auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AdminGuard implements CanActivate {
+export class GuardLoginGuard implements CanActivate {
   constructor(private authService: AuthService, private route: Router) {}
 
   canActivate(
-    // tslint:disable-next-line: max-line-length
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ):
@@ -24,22 +23,24 @@ export class AdminGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (localStorage.getItem('rol') === 'A') {
-      return true;
+    if (localStorage.getItem('rol') === 'I') {
+      console.log('Estoy tratando de entrar login    como Instru');
+      this.route.navigate(['/inicioInstru']);
+      return false;
     } else {
-      if (localStorage.getItem('rol') === 'I') {
-        console.log('Estoy tratando de entrar como guarda a Admin');
-        this.route.navigate(['/inicioInstru']);
+      if (localStorage.getItem('rol') === 'A') {
+        console.log('Estoy tratando de entrar login    como admin');
+        this.route.navigate(['/inicioAdmin']);
         return false;
       } else {
         if (localStorage.getItem('rol') === 'G') {
-          console.log('Estoy tratando de entrar como guarda a  Admin');
+          console.log('Estoy tratando de entrar a login como   guarda ');
           this.route.navigate(['/inicioSegurityG']);
           return false;
         }
       }
       this.route.navigate(['/']);
-      return false;
+      return true;
     }
   }
 }

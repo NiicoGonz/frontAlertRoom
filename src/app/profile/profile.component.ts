@@ -80,7 +80,7 @@ export class ProfileComponent implements OnInit {
             title: `Pasos para la actualizacion de datos`,
           },
           'Escribe en el campo identificacion el N° de identificacion      ',
-          'Presiona en el boton consultar y espera a que la informacion aparezca',
+          'Presiona en el boton consultar y espera a qu  e la informacion aparezca',
           'ahora en los campos que se requieran cambia los datos y pulsa el boton actualizar',
         ])
         .then((result) => {
@@ -236,7 +236,7 @@ export class ProfileComponent implements OnInit {
           }
         );
     }
-    if (this.form.valid != true) {
+    if (this.form.valid !== true) {
       this.toast = false;
       this.notification();
     }

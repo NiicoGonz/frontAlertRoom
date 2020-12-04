@@ -17,14 +17,22 @@ export class InstruGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.authService.checkToken()) {
-      console.log('IF CAN ACTIVE instru');
-
-      return true;
-    } else {
-      console.log('ELSE CAN instru');
-      this.route.navigate(['']);
-      return false;
-    }
+   if (localStorage.getItem('rol') === 'I') {
+     return true;
+   } else {
+     if (localStorage.getItem('rol') === 'A') {
+       console.log('Estoy tratando de entrar como admin a  instru');
+       this.route.navigate(['/inicioAdmin']);
+       return false;
+     } else {
+       if (localStorage.getItem('rol') === 'G') {
+         console.log('Estoy tratando de entrar como   guarda a instru');
+         this.route.navigate(['/inicioSegurityG']);
+         return false;
+       }
+     }
+     this.route.navigate(['/']);
+     return false;
+   }
   }
 }

@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import {
+  CanActivate,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  UrlTree,
+  Router,
+} from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth.service';
 
@@ -16,12 +22,21 @@ export class GuardaGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.authService.checkToken()) {
-      console.log('IF CAN ACTIVE guarda');
+    if (localStorage.getItem('rol') === 'G') {
       return true;
     } else {
-      console.log('ELSE CAN ACTIVE');
-      this.route.navigate(['' ]);
+      if (localStorage.getItem('rol') === 'A') {
+        console.log('Estoy tratando de entrar como admin a  guarda');
+        this.route.navigate(['/inicioAdmin']);
+        return false;
+      } else {
+        if (localStorage.getItem('rol') === 'I') {
+          console.log('Estoy tratando de entrar como instru a  guarda');
+          this.route.navigate(['/inicioInstru']);
+          return false;
+        }
+      }
+      this.route.navigate(['/']);
       return false;
     }
   }
