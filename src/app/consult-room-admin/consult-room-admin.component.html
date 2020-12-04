@@ -21,10 +21,11 @@
     <div class="box">
         <h3 class="H2">Consultar Ambientes</h3><br>
         <form [formGroup]="consultar" class="form-inline my-2 my-lg-0 was-validated" (ngSubmit)="getAmbiente()">
-            <input formControlName="numero" class="form-control mr-sm-2" required type="search" placeholder="12" aria-label="Search">
+            <input formControlName="numero" class="form-control mr-sm-2" required type="text" placeholder="12" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class='fas fa-search' style='font-size:20px'></i></button>
+
         </form>
-        <form [formGroup]="form">
+        <form>
             <div class="box-form">
                 <div class="row">
                     <div class="col-sm-4">
@@ -52,6 +53,7 @@
                     <label for="input">Estado del ambiente: </label>
                     <input disabled value="{{estado}}" type="text" id="state" class="form-control mx-sm-4" placeholder="Ambiente Activo">
                 </div>
+
                 <br>
             </div>
         </form>

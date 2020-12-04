@@ -13,7 +13,6 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 })
 export class ConsultRoomAdminComponent implements OnInit {
   consultar: FormGroup;
-  form: FormGroup;
   constructor(
     private fb: FormBuilder,
     private fb2: FormBuilder,
@@ -33,13 +32,8 @@ export class ConsultRoomAdminComponent implements OnInit {
     this.consultar = this.fb.group({
       numero: ['', Validators.required],
     });
-    this.form = this.fb2.group({
-      nombreAmbiente: ['', Validators.required],
-      numeroAmbiente: ['', Validators.required],
-      nombreArticulo: ['', Validators.required],
-      numeroArticulo: ['', Validators.required],
-      estadoAmbiente: ['', Validators.required],
-    });
+  
+    this.getAmbientes();
   }
   notification(): void {
     if (this.toast) {
@@ -79,7 +73,8 @@ export class ConsultRoomAdminComponent implements OnInit {
     }
   }
   getAmbiente(): void {
-    if (this.form.valid) {
+    console.log(this.consultar.value);
+    if (this.consultar.valid) {
       this.client
         .getRequest(
           `http://alertroomws.herokuapp.com/api/ambientes/consultar/${this.consultar.value.numero}`
@@ -96,14 +91,14 @@ export class ConsultRoomAdminComponent implements OnInit {
           }
           this.numeroAmbiente = response.body.id;
           this.notification();
-        }),
+        },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
           if (error.status === 404) {
             this.toast = false;
             this.notification();
           }
-        };
+        });
     }else{
        Swal.fire({
          title: 'Recuerde llenar los campos obligatorios!',
@@ -112,4 +107,21 @@ export class ConsultRoomAdminComponent implements OnInit {
        });
     }
   }
+  getAmbientes(): void{
+       this.client
+         .getRequest(
+           `http://alertroomws.herokuapp.com/api/ambientes/listar`
+         )
+         .subscribe(
+           (response: any) => {
+             console.log(response.body);
+           },
+           // tslint:disable-next-line: no-unused-expression
+           (error) => {
+             if (error.status === 404) {
+             }
+           }
+         );
+  }
+
 }

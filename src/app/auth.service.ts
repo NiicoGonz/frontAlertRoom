@@ -67,6 +67,9 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('rol');
+    localStorage.removeItem('idUser');
+    localStorage.removeItem('idSolicitud');
+    localStorage.removeItem('idLlaves');
     this.deleteCourrentUser();
     this.isLogin.next(false);
     this.admin.next(false);

@@ -9,13 +9,16 @@
     </div><br><br><br>
     <div class="form">
         <h3 class="H2">Ambientes</h3><br>
-        <form [formGroup]="form" class="form-inline">
-            <input formControlName="numeroAmbiente" class="form-control mr-sm-2" type="search" placeholder="Numero de ambiente" aria-label="Search">
+        <form [formGroup]="form" class="form-inline was-validated">
+            <input formControlName="numeroAmbiente" required class="form-control mr-sm-2" type="search" placeholder="Numero de ambiente" aria-label="Search">
             <button (click)="getAmbiente()" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Consultar ambiente</button>
         </form>
-        <div class="form-group">
+        <div>
             <label for="message-text" class="col-form-label">Descripción del inventario:</label>
-            <textarea *ngFor="let i of inventario" class="form-control" id="message-text" disabled> {{i['cantidad']}} {{i['idArticulo']['nombre']}}</textarea>
+            <div *ngFor="let i of inventario">
+                <textarea id="message-text" disabled>{{i['cantidad']}} {{i['idArticulo']['nombre']}}</textarea>
+
+            </div>
         </div>
         <form class="form-inline">
             <input *ngIf="validador" class="form-control mr-sm-2" type="text" placeholder="Llaves  Disponibles" disabled>

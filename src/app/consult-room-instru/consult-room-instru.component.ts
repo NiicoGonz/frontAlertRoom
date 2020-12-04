@@ -68,44 +68,90 @@ export class ConsultRoomInstruComponent implements OnInit {
     }
   }
   getAmbiente() {
-    this.client
-      .getRequest(
-        `http://alertroomws.herokuapp.com/api/ambientes/instructor-consultar/${this.form.value.numeroAmbiente}`
-      )
-      .subscribe((response: any) => {
-        console.log(response.body);
-        this.inventario = response.body['listaInventarioAmbiente'];
-        if (response.body['ocupado'] === 'N') {
-          this.validador = true;
-        }
-      }),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        if (error.status === 404) {
-          this.toast = false;
-          this.notification();
-        }
-      };
-  }
-  solicitarLlaves(){
-    const data = {
-       idAmbiente: {
-        id: this.form.value.numeroAmbiente
-    },
-    idUsuario: {
-        id: localStorage.getItem('idUser')
-    },
-    concepto: {
-        idConcepto: 1
-    },
-    observaciones: 'solicito llaves'
-  };
-    this.client.postRequest(
-      'http://alertroomws.herokuapp.com/api/solicitudes/solicitarllaves ', data
-      ).subscribe((response) => {
-        console.log(response);
-      }, (error) => {
+    if (this.form.valid) {
+      this.client
+        .getRequest(
+          `http://alertroomws.herokuapp.com/api/ambientes/instructor-consultar/${this.form.value.numeroAmbiente}`
+        )
+        .subscribe(
+          (response: any) => {
+            console.log(response.body);
+            this.inventario = response.body['listaInventarioAmbiente'];
+            if (response.body['ocupado'] === 'N') {
+              this.validador = true;
+            }
+          },
+          // tslint:disable-next-line: no-unused-expression
+          (error) => {
+            this.toast = false;
+            this.notification();
+          }
+        );
+    }else{
+       Swal.fire({
+         title: 'Recuerde rellenar los campos obligatorios!',
+         confirmButtonText: 'ok!',
+         confirmButtonColor: 'rgb(252, 116, 5) ',
+       });
+    }
 
-      });
+  }
+  solicitarLlaves() {
+    const data = {
+      idAmbiente: {
+        id: this.form.value.numeroAmbiente,
+      },
+      idUsuario: {
+        id: localStorage.getItem('idUser'),
+      },
+      concepto: {
+        idConcepto: 1,
+      },
+      observaciones: 'solicito llaves',
+    };
+    this.client
+      .postRequest(
+        'http://alertroomws.herokuapp.com/api/solicitudes/solicitarllaves ',
+        data
+      )
+      .subscribe(
+        (response) => {
+          console.log(response);
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer);
+              toast.addEventListener('mouseleave', Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: 'success',
+            title: 'Solicitud de llaves  exitosa',
+          });
+        },
+        (error) => {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer);
+              toast.addEventListener('mouseleave', Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: 'failed',
+            title: 'ocurrio un error',
+          });
+        }
+      );
   }
 }

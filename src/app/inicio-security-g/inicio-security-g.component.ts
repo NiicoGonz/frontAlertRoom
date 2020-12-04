@@ -53,7 +53,8 @@ export class InicioSecurityGComponent implements OnInit {
         if (this.arrayNovedades.length <= 0 ){
           this.validadorNovedades = true;
         }
-
+        const novedades6 =this.arrayNovedades.filter(x=> x['idconcepto'] ===6)
+        console.log(novedades6);
         // tslint:disable-next-line: prefer-for-of
       }),
       // tslint:disable-next-line: no-unused-expression
@@ -76,6 +77,7 @@ export class InicioSecurityGComponent implements OnInit {
     ).subscribe(
       (response) => {
       console.log(response);
+      this.getSolicitudNovedades();
       },
       (error) => {
         console.log(error);

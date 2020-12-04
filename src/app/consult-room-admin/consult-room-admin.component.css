@@ -15,6 +15,11 @@
         background-color: rgb(252, 116, 5);
         border-color: rgb(252, 116, 5);
     }
+    .btn {
+        /* margin-top: 4%; */
+        margin-left: 5% !important;
+        margin-right: -3% !important;
+    }
     .container-fluid {
         min-height: calc(100vh);
         padding: 0%;

@@ -9,10 +9,10 @@
         <br>Para que puedas ver el flujo de las novedades en los ambientes de formacion.</a>
     </div>
     <div class="container" style="text-align: center;">
-        <form [formGroup]="form">
-            <div class="custom-control custom-radio">
-                <input formControlName="idAmbiente" class="form-control" type="text" placeholder="idAmbiente">
-                <input formControlName="observaciones" class="form-control" placeholder="Ingrese una observacion">
+        <form [formGroup]="form" class="was-validated">
+            <div class="custom-control ">
+                <input formControlName="idAmbiente" required class="form-control" type="text" placeholder="idAmbiente">
+                <input formControlName="observaciones" required class="form-control" placeholder="Ingrese una observacion">
             </div>
             <br>
             <button (click)="solicitarNovedad()" type="button" class="btn btn-primary">Solicitar Guarda</button>

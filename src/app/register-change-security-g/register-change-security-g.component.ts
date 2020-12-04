@@ -93,11 +93,27 @@ export class RegisterChangeSecurityGComponent implements OnInit {
             this.notification();
             localStorage.removeItem('instru');
             localStorage.removeItem('ambiente');
+            this.finalizarNovedad();
           }
         },
         (error) => {
           this.toast = false;
           this.notification();
+        }
+      );
+  }
+  finalizarNovedad(): void {
+    const idSolicitud = localStorage.getItem('idSolicitud');
+    this.client
+      .getRequest(
+        `http://alertroomws.herokuapp.com/api/solicitudes/actualizarSolicitud/${idSolicitud}`
+      )
+      .subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.log(error);
         }
       );
   }
