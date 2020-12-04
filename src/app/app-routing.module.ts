@@ -19,10 +19,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminGuard } from  './admin/admin.guard';
 import { InstruGuard } from './guards/instru.guard';
 import { GuardaGuard } from './guards/guarda.guard';
+import { GuardLoginGuard } from './loginGuarda/guard-login.guard';
 
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent , canActivate:[GuardLoginGuard]},
   {
     path: 'inicioAdmin',
     component: InicioAdminComponent,

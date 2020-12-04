@@ -39,7 +39,6 @@ export class GuardLoginGuard implements CanActivate {
           return false;
         }
       }
-      this.route.navigate(['/']);
       return true;
     }
   }
