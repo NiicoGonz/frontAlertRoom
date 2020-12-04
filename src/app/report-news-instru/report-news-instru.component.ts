@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { ClientService } from '../client.service';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 @Component({
   selector: 'app-report-news-instru',
   templateUrl: './report-news-instru.component.html',
@@ -21,8 +22,45 @@ export class ReportNewsInstruComponent implements OnInit {
   form: FormGroup;
   dtOptions: DataTables.Settings = {};
   dtTrigger = new Subject();
+  toast = true;
   // tslint:disable-next-line: radix
+  notification(): void {
+    if (this.toast) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        },
+      });
 
+      Toast.fire({
+        icon: 'success',
+        title: 'Se registro la solicitud con exito',
+      });
+    } else {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: 'error',
+        title: 'fallo en la solicitud, intentelo de nuevo',
+      });
+    }
+  }
   change(): void {
     if (this.validator === false) {
       this.validator = true;
@@ -66,30 +104,56 @@ export class ReportNewsInstruComponent implements OnInit {
       };
   }
   solicitarNovedad(): void {
-    const data = {
-      idAmbiente: {
-        id: this.form.value.idAmbiente,
-      },
-      idUsuario: {
-        id: localStorage.getItem('idUser'),
-      },
-      concepto: {
-        idConcepto: 6,
-      },
-      observaciones: this.form.value.observaciones,
-    };
-    console.log(data);
-    this.client
-      .postRequest(
-        'http://alertroomws.herokuapp.com/api/solicitudes/solicitarNovedad',
-          data
-      )
-      .subscribe(
-        (response) => {
-          console.log(response);
-        },
-        (error) => {
-          console.log(error);
-        });
+    if (this.form.valid){
+       const data = {
+         idAmbiente: {
+           id: this.form.value.idAmbiente,
+         },
+         idUsuario: {
+           id: localStorage.getItem('idUser'),
+         },
+         concepto: {
+           idConcepto: 6,
+         },
+         observaciones: this.form.value.observaciones,
+       };
+       console.log(data);
+       this.client
+         .postRequest(
+           'http://alertroomws.herokuapp.com/api/solicitudes/solicitarNovedad',
+           data
+         )
+         .subscribe(
+           (response: any) => {
+             console.log(response);
+             if (response.status === 200) {
+               this.toast = true;
+               this.notification();
+             }
+           },
+           (error) => {
+             console.log(error);
+             this.toast = false;
+             this.notification();
+           }
+         );
+    }else{
+       const Toast = Swal.mixin({
+         toast: true,
+         position: 'bottom-end',
+         showConfirmButton: false,
+         timer: 3000,
+         timerProgressBar: true,
+         didOpen: (toast) => {
+           toast.addEventListener('mouseenter', Swal.stopTimer);
+           toast.addEventListener('mouseleave', Swal.resumeTimer);
+         },
+       });
+
+       Toast.fire({
+         icon: 'error',
+         title: ' por favor llene los campos obligatorios',
+       });
+    }
   }
 }

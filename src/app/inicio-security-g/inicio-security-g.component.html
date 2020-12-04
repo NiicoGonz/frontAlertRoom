@@ -27,7 +27,7 @@
                                 <h4 class="alert-heading">No hay solicitud de llaves en este momento </h4>
                             </div>
                         </div>
-                        <div *ngFor="let i of arrayNovedades" class="alert alert-warning" role="alert">
+                        <div *ngFor="let i of novedades6" class="alert alert-warning" role="alert">
                             <i class="fas fa-info-circle" style="font-size: 36px"></i>
                             <div class="text-alert">
                                 <h4 class="alert-heading">Solicitud para reportar novedad</h4>
@@ -35,7 +35,7 @@
                                     Se le solicita en el ambiente {{ i["idAmbiente"]["id"] }} por motivo de novedad '{{ i["observaciones"] }}'
                                 </p>
                             </div>
-                            <button (click)="atenderNovedad(i)" type="button" class="btn btn-primary">
+                            <button (click)="finalizarNovedad(i)" type="button" class="btn btn-primary">
               <i class="far fa-handshake" style="font-size: 36px"></i> Atender
               Novedad
             </button>

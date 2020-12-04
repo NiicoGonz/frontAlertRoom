@@ -94,6 +94,12 @@ export class RegisterChangeSecurityGComponent implements OnInit {
             localStorage.removeItem('instru');
             localStorage.removeItem('ambiente');
             this.finalizarNovedad();
+            localStorage.removeItem('ambiente');
+            localStorage.removeItem('instru');
+            localStorage.removeItem('idSolicitud');
+            this.form.reset();
+
+
           }
         },
         (error) => {
