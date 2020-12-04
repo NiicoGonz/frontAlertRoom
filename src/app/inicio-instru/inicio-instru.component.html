@@ -2,30 +2,43 @@
 <!--BODY-->
 <div class="container-fluid">
 
-    <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif; margin-top: 5%;">Alert Room<br>¿Que puedo realizar?</h3><hr>
+    <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif; margin-top: 5%;">Alert Room<br>¿Que puedo realizar? </h3>
+    <hr>
     <div class="container">
         <div class="id">
-            <i class='far fa-edit' style='font-size:48px; margin: 8%; margin-top: 1%;'><br><a [routerLink]="['/reportNewsInstru']" class="badge badge-light"><h6>Ir al modulo de notificar novedades</h6></a></i><br>
-            <i class='fas fa-wifi' style='font-size:48px; margin: 8%; margin-top: 1%;'><br><a [routerLink]="['/consultRoomInstru']" class="badge badge-light"><h6>Ir al modulo de ambientes</h6></a></i><br>
-            <i class='fas fa-key' style='font-size:48px; margin: 8%;margin-top: 1%;'><br><a [routerLink]="['/passKeyInstru']" class="badge badge-light"><h6>Ir al modulo de pasar llaves</h6></a></i>
+            <i class='far fa-edit' style='font-size:48px; margin: 8%; margin-top: 1%;'><br><a
+                    [routerLink]="['/reportNewsInstru']" class="badge badge-light">
+                    <h6>Ir al módulo de notificar novedades</h6>
+                </a></i><br>
+            <i class='fas fa-wifi' style='font-size:48px; margin: 8%; margin-top: 1%;'><br><a
+                    [routerLink]="['/consultRoomInstru']" class="badge badge-light">
+                    <h6>Ir al módulo de ambientes</h6>
+                </a></i><br>
+            <i class='fas fa-key' style='font-size:48px; margin: 8%;margin-top: 1%;'><br><a
+                    [routerLink]="['/passKeyInstru']" class="badge badge-light">
+                    <h6>Ir al módulo de pasar llaves</h6>
+                </a></i>
         </div>
         <div class="iz" style="text-align: center;">
             <h4>Como notificador de novedades</h4>
-            <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.Petierunt
-                uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+            <p class="text-justify">
+                Alert Room le permite notificar las novedades que de sen en el ambiente al cual este ingresando, ademas, de mostrarle los reportes ya realizados para saber que eventualidades han ocurrido en los ambientes.
+
             </p><br>
             <h4>Como solicitador de ambiente</h4>
-            <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.Petierunt
-                uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+            <p class="text-justify">
+                Alert Room le permite realizar solicitudes de llaves para que el proceso de apertura sea más rápido, dando la opción de acercarse al puesto de control del guarda y las llaves le sean entregadas posterior a realizar su solicitud, tambien puede consultar
+                si un ambiente ya se encuentra en uso por un instructor lo cual no le permitirá realizar la solicitud de llaves y deberá esperar que las llaves sean devueltas o dirigirse al ambiente y solicitar al instructor poseedor que le haga la rotación
+                de las llaves
             </p><br>
             <h4>Como rotador de llaves</h4>
-            <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.Petierunt
-                uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+            <p class="text-justify">
+                Alert Room le permite rotar las llaves a otro instructor, este proceso solo se permitirá si tiene las llaves en posesión y solo le permitirá rotar las llaves del ambiente en el que se encuentre.
             </p><br>
         </div>
-        <div class="spant" style='width: -15px; height: 8px;' >
+        <div class="spant" style='width: -15px; height: 8px;'>
             <img [src]="img_ini">
-         </div>
+        </div>
         <div style="clear: both;"></div>
     </div>
 </div>

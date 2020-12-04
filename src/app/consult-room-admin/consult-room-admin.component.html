@@ -13,17 +13,18 @@
         </ul>
     </nav><br>
     <div class="box-info">
-        <h1>Gestion de consulta ambientes</h1>
+        <h1>Gestión consulta de ambientes</h1>
         <hr>
-        <a>El modulo de gestion de consulta de ambientes puedes consultar la informacion de los ambientes con su respectivo inventario;
+        <a>El módulo de gestión consulta de ambientes le permite consultar la información de los ambientes con su
+            respectivo inventario.
             <br></a><br><br><br>
     </div><br>
     <div class="box">
         <h3 class="H2">Consultar Ambientes</h3><br>
         <form [formGroup]="consultar" class="form-inline my-2 my-lg-0 was-validated" (ngSubmit)="getAmbiente()">
             <input formControlName="numero" class="form-control mr-sm-2" required type="text" placeholder="12" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class='fas fa-search' style='font-size:20px'></i></button>
-
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class='fas fa-search'
+                    style='font-size:20px'></i></button>
         </form>
         <form>
             <div class="box-form">
@@ -33,12 +34,12 @@
                         <input disabled value="{{nombreAmbiente}}" type="text" class="form-control" placeholder=" Gestion Salud">
                     </div><br>
                     <div class="col-sm-4">
-                        <label for="input">Numero Ambiente</label>
+                        <label for="input"> Número Ambiente</label>
                         <input disabled value="{{numeroAmbiente}}" type="text" class="form-control" placeholder=" 12 ">
                     </div>
                 </div>
                 <br>
-                <h3 class="H2">Informacion de inventario</h3><br>
+                <h3 class="H2">Información de inventario</h3><br>
                 <form class="form-inline">
                     <div class="form-group" *ngFor="let i of arrayAmbiente; let indice = index">
                         <label for="input">Nombre</label>
@@ -53,13 +54,11 @@
                     <label for="input">Estado del ambiente: </label>
                     <input disabled value="{{estado}}" type="text" id="state" class="form-control mx-sm-4" placeholder="Ambiente Activo">
                 </div>
-
                 <br>
             </div>
         </form>
         <br>
     </div>
-
 </div>
 <!--/BOBY-->
 <app-footer></app-footer>

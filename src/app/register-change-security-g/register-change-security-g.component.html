@@ -5,18 +5,22 @@
         <h1><a class="logo">Guarda Seguridad</a></h1>
         <ul class="list-unstyled components mb-5">
             <li>
-                <a [routerLink]="['/registerChangeSegurityG']"><span class="fa fa-pen-alt mr-3"></span> Registrar novedades</a>
+                <a [routerLink]="['/registerChangeSegurityG']"><span class="fa fa-pen-alt mr-3"></span> Registrar
+                    novedades</a>
             </li>
             <li>
-                <a [routerLink]="['/consultChangeSegurityG']"><span class="fa fa-search fa-fw"></span> Consultar novedades</a>
+                <a [routerLink]="['/consultChangeSegurityG']"><span class="fa fa-search fa-fw"></span> Consultar
+                    novedades</a>
             </li>
         </ul>
     </nav><br><br>
     <div class="block-info" style=" text-align: center;margin-left: 25%;margin-right: 10%;font-family: 'Times New Roman', Times, serif;">
-        <h1>Gestion de novedades</h1>
+        <h1>Gestión de novedades</h1>
         <hr><br>
-        <a>El modulo de gestion de novedades te permitira registrar las novedades con su respectiva fecha y ambiente para que se lleve un control de las mismas; 
-            <br>Se llevara un registro constante de las novedades registradas para salvaguardar los vienes de cada ambiente, Tenga en cuenta que los campos con (*) son necesario que los diligencie. </a>
+        <a>El módulo de gestión de novedades te permitirá registrar las novedades con su respectiva fecha y ambiente
+            para que se lleve un control de las mismas;
+            <br>Se llevará un registro constante de las novedades registradas para salvaguardar los bienes de cada
+            ambiente, Tenga en cuenta que los campos con (*) son necesario que los diligencie. </a>
     </div><br><br><br>
     <div class="box">
         <h2 class="H2" style="margin-left: 22%;">Registro de novedades</h2><br>
@@ -33,17 +37,14 @@
                         <input disabled value="{{instru}}" type="text" id="input" class="form-control mx-sm-4" placeholder="000.000.000" style="width: 160px;">
                     </div>
                     <div class="col-sm-4">
-                        <label for="input">*Descripcion :</label>
+                        <label for="input">*Descripción :</label>
                         <textarea formControlName="observaciones" class="form-control" aria-label="With textarea"></textarea>
                     </div>
                 </div>
             </form>
         </div>
         <button (click)="registrarNovedad()" type="button" class="btn btn-primary btn-lg " style="margin-left: 30%;">Generar Reporte</button>
-
-
     </div>
 </div>
-
 <!--/BODY-->
 <app-footer></app-footer>

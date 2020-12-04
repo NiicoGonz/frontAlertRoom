@@ -12,13 +12,11 @@
         </ul>
     </nav>
     <div class="box-info" style="margin-top: -2%;">
-        <h1>Gestion de registro ambientes</h1><br>
+        <h1>Gestión de registro ambientes</h1><br>
         <hr>
-        <a>El modulo de gestion de registro de ambientes puedes registrar la informacion de los ambientes con su respectivo inventario;
-            <br>Te brindamos la facilidad de añadir algun objeto al inventario de un ambiente correspondiente o borrarlo.</a><br><br><br>
-
+        <a>En el módulo de gestión de registro de ambientes puede registrar la información de los ambientes con su
+            respectivo inventario.</a><br><br><br>
     </div><br><br><br>
-
     <form [formGroup]="formAmbiente" class="boxx was-validated">
         <h3 class="H2">Registrar Ambientes</h3><br>
         <div class="box-form">
@@ -92,18 +90,14 @@
                         </div>
                         <div class="form-check form-check-inline">
                             <input formControlName="estado" class="form-check-input" type="radio" name="estado" id="inlineRadio2" value="I">
-                            <label class="form-check-label" for="inlineRadio2">Desactivar para prestamo</label>
+                            <label class="form-check-label" for="inlineRadio2">Desactivar para préstamo</label>
                         </div>
                         <br>
                         <button type="button" class="btn btn-outline-primary col-sm-4" (click)="registroInventario()">Registrar</button><br>
                     </div><br>
                 </div>
-
             </div>
-
         </div>
-
     </form>
 </div>
-
 <app-footer></app-footer>

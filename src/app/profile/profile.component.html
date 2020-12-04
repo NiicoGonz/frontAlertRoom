@@ -2,19 +2,21 @@
 <!--BOBY-->
 <div class="container-fluid">
     <div class="box-info" style="text-align: center;  font-family: 'Times New Roman', Times, serif; margin-top: 2%;">
-        <h1>Informacion del usuario</h1><br>
+        <h1>Información del usuario</h1><br>
         <hr>
-        <a>El modulo de informacion del usuario esta habilitado para que actualices tu informacion constantemente de ser necesario;
-            <br>Te brindamos la seguridad de que tus datos se actualizaran correctamente y que seran manipulados con precaucion en el sistema.</a><br><br><br>
+        <a>El módulo de información del usuario está habilitado para que actualice la información constantemente de ser
+            necesario;
+            <br>Brindamos la seguridad de que sus datos se actualizarán correctamente y que serán manipulados con
+            precaución en el sistema. </a><br><br><br>
     </div>
-    <h2>Informacion personal del Usuario</h2><br>
+    <h2>Información personal del Usuario</h2><br>
     <div class="box-form">
         <div class="re-box" style="text-align: center;">
             <form [formGroup]="form" class="was-validated">
                 <div class="col-sm-4">
                     <div class="icon"><i class='fas fa-address-card' style='font-size:36px'></i></div>
-                    <input *ngIf="verificador== false" required [(ngModel)]="id" formControlName="identificacion" type="text" class="form-control" id="identification" placeholder="Identificacion">
-                    <input *ngIf="verificador==true" disabled [(ngModel)]="id" formControlName="identificacion" type="text" class="form-control" id="identification" placeholder="Identificacion">
+                    <input *ngIf="verificador== false" required [(ngModel)]="id" formControlName="identificacion" type="text" class="form-control" id="identification" placeholder="Identificación">
+                    <input *ngIf="verificador==true" disabled [(ngModel)]="id" formControlName="identificacion" type="text" class="form-control" id="identification" placeholder="Identificación">
 
                 </div><br>
                 <div class="col-sm-4">
@@ -31,7 +33,7 @@
                 </div><br>
                 <div class="col-sm-4">
                     <div class="icon"><i class='far fa-address-book' style='font-size:36px'></i></div>
-                    <input [(ngModel)]="telefono" formControlName="telefono" type="text" class="form-control" id="phone" placeholder="Telefono">
+                    <input [(ngModel)]="telefono" formControlName="telefono" type="text" class="form-control" id="phone" placeholder="Teléfono">
                 </div><br>
                 <div class="col-sm-4">
                     <div class="icon"><i class='fas fa-key' style='font-size:36px'></i></div>
@@ -39,7 +41,8 @@
                 </div>
                 <button *ngIf="validador" (click)="putUser()" type="button" class="btn btn-outline-primary col-sm-4">Actualizar</button><br>
                 <button (click)="getUsuario()" type="button" class="btn btn-outline-primary col-sm-4">Consultar</button><br>
-                <button (click)="updateEstado()" *ngIf="auth.isAdmin() | async" type="button" class="btn btn-primary col-sm-4" data-toggle="modal" data-target=".bd-example-modal-sm">Dar de baja</button>
+                <button (click)="updateEstado()" *ngIf="auth.isAdmin() | async" type="button" class="btn btn-primary col-sm-4" data-toggle="modal" data-target=".bd-example-modal-sm">Dar de
+                    baja</button>
             </form>
             <div class="spant">
                 <img [src]="img_profile">

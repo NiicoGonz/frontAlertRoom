@@ -3,14 +3,12 @@
 
 <body>
     <div class="block-info">
-        <h1>Gestion de solicitudes</h1>
+        <h1>Gestión de solicitudes</h1>
         <hr />
         <br />
-        <a>El modulo de gestion de solicitudes te permitira llevar un control
-      completo de las solicitudes que se realizan en tiempo real, asi como el
-      estado de cada una y su respectiva descripcion; <br />Brindandote
-      comodidad de que no quedaran solicitudes sin atender.
-    </a>
+        <a>El módulo de gestión de solicitudes le permite llevar un control
+            completo de las solicitudes que se realizan en tiempo real, así como saber el
+            estado de cada una y su respectiva descripción. </a>
     </div>
     <div class="container">
         <br />
@@ -24,7 +22,7 @@
 
                             <div class="text-alert">
 
-                                <h4 class="alert-heading">No hay solicitud de llaves en este momento </h4>
+                                <h4 class="alert-heading">No hay solicitudes de llaves en este momento </h4>
                             </div>
                         </div>
                         <div *ngFor="let i of novedades6" class="alert alert-warning" role="alert">
@@ -36,9 +34,9 @@
                                 </p>
                             </div>
                             <button (click)="finalizarNovedad(i)" type="button" class="btn btn-primary">
-              <i class="far fa-handshake" style="font-size: 36px"></i> Atender
-              Novedad
-            </button>
+                                <i class="far fa-handshake" style="font-size: 36px"></i> Atender
+                                Novedad
+                            </button>
                         </div>
                     </div>
                 </table>
@@ -58,21 +56,13 @@
                             </p>
                         </div>
                         <button (click)='entregarLlavesInstru(i)' type="button" class="btn btn-primary">
-              <svg
-                width="2em"
-                height="2em"
-                viewBox="0 0 16 16"
-                class="bi bi-check"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"
-                />
-              </svg>
-              Entregar Llaves
-            </button>
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z" />
+                            </svg>
+                            Entregar Llaves
+                        </button>
                     </div>
                     <div *ngIf="validadorLlaves" class="alert alert-secondary" role="alert">
 

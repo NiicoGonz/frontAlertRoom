@@ -9,12 +9,12 @@
                     <div class="contained">
                         <div class="col-12 user-img">
                             <img [src]="img_circle" /><br>
-                            <h2><a>INICIO DE SESION</a></h2>
+                            <h2><a>INICIO DE SESIÓN</a></h2>
                         </div>
                         <form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-12 was-validated" *ngIf="load">
                             <div class="form-group" id="user-group">
                                 <img [src]="img_identification" />
-                                <input formControlName="identification" type="text" required class="form-control" placeholder="Identification" name="identification" />
+                                <input formControlName="identification" type="text" required class="form-control" placeholder="Identificación" name="identification" />
                             </div>
                             <div class="form-group" id="contrasena-group">
                                 <img [src]="img_password" />

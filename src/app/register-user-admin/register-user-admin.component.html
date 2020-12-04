@@ -13,10 +13,12 @@
         </ul>
     </nav>
     <div class="box-info" style="margin-top: 3%;">
-        <h1>Gestion de usuarios</h1><br>
+        <h1>Gestión de usuarios</h1><br>
         <hr>
-        <a>El modulo de gestion de usuarios podras registrar y consultar la informacion de las personas relacionadas con el sistema;
-            <br>Te brindamos seguridad con la manipulacion de informacion sensible de tus usuarios para garantizar un correcto uso de ellos.</a><br><br><br>
+        <a>En el módulo de gestión de usuarios puede registrar y consultar la información de las personas registradas
+            en el sistema;
+            <br>Brindamos seguridad con la manipulación de la información sensible de sus usuarios para garantizar un
+            correcto uso de ellos.</a><br><br><br>
     </div><br><br><br><br>
     <div class="box-form">
         <form [formGroup]="form" class="was-validated">
@@ -33,7 +35,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="icon"><i class='fas fa-address-card' style='font-size:36px'></i></div>
-                    <input formControlName="identificacion" required type="text" class="form-control" id="Identificacion" placeholder="Identificacion">
+                    <input formControlName="identificacion" required type="text" class="form-control" id="Identificacion" placeholder="Identificación">
                 </div><br>
                 <div class="col-sm-4">
                     <div class="icon"><i class='far fa-id-badge' style='font-size:36px'></i></div>
@@ -49,7 +51,7 @@
                 </div><br>
                 <div class="col-sm-4">
                     <div class="icon"><i class='far fa-address-book' style='font-size:36px'></i></div>
-                    <input formControlName="telefono" type="text" class="form-control" id="phone" placeholder="Telefono">
+                    <input formControlName="telefono" type="text" class="form-control" id="phone" placeholder="Teléfono">
                 </div>
                 <button type="button" class="btn btn-primary col-sm-4" (click)="onSubmit()">Registrar</button>
             </div>
@@ -60,6 +62,4 @@
     </div>
 </div>
 <app-footer></app-footer>
-
-
 <!--/BODY-->

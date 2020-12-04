@@ -1,16 +1,15 @@
 <app-nav></app-nav>
 <!--BOBY-->
-
 <div class="container-fluid">
-
     <div class="block-info" style="margin-left: 10%; text-align: center;">
-        <h1>Gestion de Ambientes</h1>
+        <h1>Gestión de Ambientes</h1>
         <hr>
-        <a>El modulo de gestion de ambinetes te permitira llevar un control completo de busqueda filtrada, devolucion de llaves y el estado de los mismos; 
-            <br>Brindandote comodidad de saber que sucede en los ambientes de formacion. </a>
+        <a>El módulo de gestión de ambientes le permite llevar un control, ademas, puede realizar búsquedas filtradas
+            para conocer el estado y registrar la devolución de llaves al momento de un instructor devolverlas.
+            <br>Gestión de ambiente le brida la comodidad de saber en qué estado se encuentran los ambientes de
+            formación. </a>
     </div><br><br>
-
-    <h2 class="H2">Informacion de ambientes</h2>
+    <h2 class="H2">Información de ambientes</h2>
     <br>
     <br>
     <div class="box-table">
@@ -22,7 +21,7 @@
                     <th scope="col">Numero Ambiente</th>
                     <th scope="col">Detalles</th>
                     <th *ngIf="checkID" scopoe="col">Id Solicitud</th>
-                    <th scope="col">Descripcion</th>
+                    <th scope="col">Descripción</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,17 +34,15 @@
                     </td>
                     <td *ngIf="checkID">{{i.idSolicitud}}</td>
                     <td>
-                        Llaves en ambiente :{{i.idAmbiente.ocupado}}
+                        Llaves en ambiente: {{i.idAmbiente.ocupado}}
                         <button (click)="getLlaves(i.idSolicitud)" *ngIf="i.idAmbiente.ocupado == 'S'" type="button" class="btn btn-primary">
-                Devolucion de Llaves
-              </button>
+                            Devolución de Llaves
+                        </button>
                     </td>
-
                 </tr>
             </tbody>
         </table>
     </div>
-
 </div>
 <br />
 <!--/BOBY-->

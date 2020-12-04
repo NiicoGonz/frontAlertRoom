@@ -2,20 +2,21 @@
 <!--BODY-->
 <div class="container-fluid">
     <div class="block-info" style=" text-align: center;margin-left: 15%;margin-right: 10%;margin-top: 3%;font-family: 'Times New Roman', Times, serif;">
-        <h1>Rotacion de llaves</h1>
+        <h1>Rotación de llaves</h1>
         <hr><br>
-        <a> Realizar la rotación de llavesEn caso de que otro instructor lo solicite, tenga   cuidado en el momento de entregar
-                 para tener un mayor control al realizar estos verifique en que ambiente se encuentran las llaves y  si las posee  otro instructor.
-            </a>
+        <a> Realizar la rotación de llaves en caso de que otro instructor lo solicite, tenga cuidado en el momento de
+            entregar para tener un mayor control al realizar esto verifique en qué ambiente se encuentran las llaves y
+            si las posee otro instructor.
+        </a>
     </div><br><br><br>
     <div class="id">
         <form [formGroup]="form" class="form was-validated">
             <div class="form-group">
-                <label for="idinstru">Ingrese el id del instructor a entregar:</label>
+                <label for="idinstru">Ingrese el identificador del instructor a entregar:</label>
                 <input formControlName="idInstru" required type="text" class="form-control" id="idinstru" placeholder="11101210">
             </div>
             <div class="form-group">
-                <label for="ambiente">Ingrese el numero de ambiente que va rotar:</label>
+                <label for="ambiente">Ingrese el número de ambiente que va rotar:</label>
                 <input formControlName="idAmbiente" required type="text" class="form-control" id="ambiente" placeholder="12">
             </div>
             <button (click)="onSubmit()" type="button" class="btn btn-outline-primary">Pasar LLaves</button>
