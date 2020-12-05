@@ -2,19 +2,13 @@
     "name": "alert-room-front",
     "version": "0.0.0",
     "scripts": {
-        "heroku-postbuild": "ng build --prod",
         "ng": "ng",
-        "start": "node server.js",
+        "start": "ng serve",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
-    "engines": {
-        "node": "14.4.0",
-        "npm": "6.14.8"
-    },
-
     "private": true,
     "dependencies": {
         "@angular/animations": "~10.0.5",
@@ -48,9 +42,7 @@
         "sweetalert2": "^10.11.0",
         "tslib": "^2.0.0",
         "umd": "^3.0.3",
-        "zone.js": "~0.10.3",
-        "typescript": "~3.9.5"
-
+        "zone.js": "~0.10.3"
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~0.1000.4",
