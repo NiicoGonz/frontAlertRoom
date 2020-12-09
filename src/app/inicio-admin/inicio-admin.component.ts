@@ -63,7 +63,6 @@ export class InicioAdminComponent implements OnDestroy, OnInit {
 
   downloadPDF(): void{
       // Extraemos el
-      alert('Imprimiendo el pdf')
       const DATA = document.getElementById('htmlData');
       const doc = new jsPDF('p', 'pt', 'a4');
       const options = {
