@@ -5,7 +5,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import html2canvas from 'html2canvas';
 import { Subject } from 'rxjs';
-import * as jsPDF from 'jspdf';
+import jsPDF from 'jspdf';
 
 
 @Component({
@@ -63,6 +63,7 @@ export class InicioAdminComponent implements OnDestroy, OnInit {
 
   downloadPDF(): void{
       // Extraemos el
+      alert('Imprimiendo el pdf')
       const DATA = document.getElementById('htmlData');
       const doc = new jsPDF('p', 'pt', 'a4');
       const options = {

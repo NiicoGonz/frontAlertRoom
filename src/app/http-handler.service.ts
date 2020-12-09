@@ -11,7 +11,6 @@ export class HttpHandlerService {
     console.log('estoy en el handler', response);
     switch (response.status) {
       case 200:
-        console.log('estoy en el caso 200');
         Swal.fire({
           icon: 'success',
           title: 'Logueado con exito',
@@ -34,7 +33,7 @@ export class HttpHandlerService {
       case 404:
         Swal.fire({
           icon: 'error',
-          title: 'Upps no se ha podido loguear, verifica usuario y contraseña',
+          title: 'Verifique usuario y contraseña',
           showConfirmButton: false,
           timer: 2500,
         });
@@ -42,13 +41,10 @@ export class HttpHandlerService {
 
         break;
       case 101:
-        Swal.fire('Todo esta correcto');
         break;
       case 201:
-        Swal.fire('su solicitud fue creada');
         break;
       case 500:
-        console.log('entre al 400');
         break;
       default:
         break;

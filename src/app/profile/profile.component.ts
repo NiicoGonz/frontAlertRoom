@@ -39,11 +39,11 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       identificacion: ['', Validators.required],
-      nombre: [''],
-      apellido: [''],
-      email: [''],
-      telefono: [''],
-      contraseña: [''],
+      nombre: ['',],
+      apellido: ['', ],
+      email: ['', ],
+      telefono: ['', Validators.email],
+      contraseña: ['', ],
     });
     this.guia();
   }

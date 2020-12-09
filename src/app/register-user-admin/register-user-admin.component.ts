@@ -30,7 +30,7 @@ export class RegisterUserAdminComponent implements OnInit {
       identificacion: ['', Validators.required],
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required,Validators.email]],
       telefono: [''],
     });
   }

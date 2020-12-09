@@ -89,7 +89,7 @@ export class LoginComponent implements OnInit {
           Swal.fire({
              icon: 'error',
              title:
-               'Upps, parece que no completaste el formulario. Llena los campos ',
+               'Parece que no completaste el formulario. Llena los campos ',
              showConfirmButton: false,
              timer: 2500,
            });

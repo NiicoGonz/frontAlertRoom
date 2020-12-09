@@ -91,7 +91,7 @@ const routes: Routes = [
     component: PassKeyInstruComponent,
     canActivate: [InstruGuard],
   },
-  { path: 'profile', component: ProfileComponent, canActivate: [InstruGuard] },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 

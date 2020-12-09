@@ -12,7 +12,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./consult-user-admin.component.css'],
 })
 export class ConsultUserAdminComponent implements OnDestroy, OnInit {
-  dtOptions: DataTables.Settings = {};
+  dtOptions: any = {};
   dtTrigger = new Subject();
   constructor(
     private fb: FormBuilder,
@@ -35,7 +35,10 @@ export class ConsultUserAdminComponent implements OnDestroy, OnInit {
         },
         paging: true,
         searching: true,
-        retrieve: true
+        retrieve: true,
+         buttons: [
+        'pdfHtml5'
+    ]
       });
     this.getUsuarios();
   }
@@ -79,7 +82,8 @@ export class ConsultUserAdminComponent implements OnDestroy, OnInit {
       .subscribe(
         (response: any) => {
           console.log(response);
-          this.ngOnInit();
+          this.ngOnDestroy();
+          this.getUsuarios();
         },
         (err) => {
           console.log(err);
